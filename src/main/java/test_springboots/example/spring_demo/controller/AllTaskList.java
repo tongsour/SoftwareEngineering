@@ -40,8 +40,8 @@ public class AllTaskList {
             @RequestParam("password") String password,
             Model model) {
         // Validate login
-        if ("chansuvannet".equals(username) && "123456".equals(password)) {
-            return "redirect:/dashbord";
+        if ("Heng Tongsour".equals(username) && "123456".equals(password)) {
+            return "redirect:/dashboard";
         } else {
             model.addAttribute("error", "Invalid username or password.");
             return "task2";
@@ -49,7 +49,7 @@ public class AllTaskList {
     }
 
     // Serve the dashboard
-    @GetMapping("/dashbord")
+    @GetMapping("/dashboard")
     public String task5() {
         return "task5";
     }
